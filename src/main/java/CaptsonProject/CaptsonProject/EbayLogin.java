@@ -92,7 +92,7 @@ public class EbayLogin {
 		eCat.catName().click();
 		JavascriptExecutor js = (JavascriptExecutor)driver;
 		js.executeScript("window.scrollBy(0,100)");
-		eCat.mobile().click();
+		//eCat.mobile().click();
 		
 		EbaySearch esearch = new EbaySearch(driver);
 		esearch.search().sendKeys(data.getProperty("search"));
@@ -107,10 +107,14 @@ public class EbayLogin {
         // Initialize EbayWishList
 		 ArrayList<String> lst=new ArrayList<String>(driver.getWindowHandles());
 		 driver.switchTo().window(lst.get(1));
+		 //JavascriptExecutor js1 = (JavascriptExecutor)driver;
+		js.executeScript("window.scrollBy(0,100)");
 		 EbayWishList elist = new EbayWishList(driver); 
 		 ScreenShots();
-		 elist.colorOption().click();
-		 elist.selectColor("Black");
+		 elist.wishCheck().click();
+		 Thread.sleep(1500);
+		 js.executeScript("window.scrollBy(0,-100)");
+		 //driver.quit();
 		 
 		 
 

@@ -7,17 +7,13 @@ import org.openqa.selenium.support.ui.Select;
 
 public class EbayWishList {
 WebDriver driver=null;
-By colorOption=By.xpath("//select[@selectboxlabel='Color']");
+By wishCheck=By.xpath("//button[@id='watchBtn_btn_1']");
 
 public EbayWishList(WebDriver driver) {
 	this.driver = driver;
 }
 
-public WebElement colorOption() {
-	return driver.findElement(colorOption);
-}
-public void selectColor(String color) {
-    Select dropdown = new Select(colorOption());
-    dropdown.selectByVisibleText(color);
+public WebElement wishCheck() {
+	return driver.findElement(wishCheck);
 }
 }

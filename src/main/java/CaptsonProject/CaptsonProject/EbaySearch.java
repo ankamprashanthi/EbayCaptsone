@@ -9,7 +9,7 @@ public class EbaySearch {
 
 	By search = By.xpath("//input[@id='gh-ac']");
 	By inputtext=By.id("gh-btn");
-	By product=By.xpath("//li[@id='item428884ef9f']//img[@alt='1.6 Inch IPS Display Long Standby Watches HD Voice Call Waterproof Smartwatch']");
+	By product=By.xpath("//img[@alt='Callaway Diablo Edge 6 Hybrid RH Senior Flex Graphite 30°']");
 	
 	public EbaySearch(WebDriver driver) {
 		this.driver = driver;

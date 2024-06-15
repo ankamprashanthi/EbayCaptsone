@@ -7,8 +7,8 @@ import org.openqa.selenium.WebElement;
 public class EbayCategory {
 	WebDriver driver=null;
 	By categories=By.id("gh-shop-a");
-	By catName=By.linkText("Electronics");
-	By mobile=By.linkText("Cell Phones, Smart Watches & Accessories");
+	By catName=By.linkText("Sporting goods");
+	//By mobile=By.linkText("Cell Phones, Smart Watches & Accessories");
 
 	
 	public EbayCategory(WebDriver driver) {
@@ -19,9 +19,6 @@ public class EbayCategory {
 	}
 	public WebElement catName() {
 		return driver.findElement(catName);
-	}
-	public WebElement mobile() {
-		return driver.findElement(mobile);
 	}
 	
 }
