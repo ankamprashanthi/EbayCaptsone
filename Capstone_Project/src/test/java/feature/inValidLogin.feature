@@ -8,4 +8,4 @@ And valid details should be given by user
 
 Examples:
 |email|password|
-|prashanthiankam@gmail.com|1234567|
+|prashanthiankam@gmail.com|12345|

@@ -10,6 +10,7 @@ import java.io.IOException;
 import java.time.Duration;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.NoSuchElementException;
 import java.util.Properties;
 import java.util.Set;
 
@@ -34,6 +35,7 @@ import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
+import org.testng.asserts.SoftAssert;
 
 import com.google.common.io.Files;
 import com.relevantcodes.extentreports.ExtentReports;
@@ -43,12 +45,11 @@ import com.relevantcodes.extentreports.LogStatus;
 import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class EbayLogin extends BaseClass {
-//	WebDriver driver=null;
-
+	
 	public static ExtentTest test; 
 	public static ExtentReports report;
 	private List<String> excelData;
-	 
+
 	@BeforeClass 
 	public static void startTest() { 
 	      report = new ExtentReports("./target/ExtentReportResults.html");
@@ -74,8 +75,11 @@ public class EbayLogin extends BaseClass {
 		data.load(fs);
 			
 		EbayLoginPage eLogin = new EbayLoginPage(driver);
+		test.log(LogStatus.INFO, "Navigating to the specified URL");
+
 		eLogin.email().sendKeys(data.getProperty("email"));
 		eLogin.next().click();
+		
 		eLogin.password().sendKeys(data.getProperty("password"));
 		eLogin.login().click();
 //		driver.findElement(By.id("passkeys-cancel-btn")).click();
@@ -92,9 +96,10 @@ public class EbayLogin extends BaseClass {
         FileInputStream fs = new FileInputStream("./Test Data/data.properties");
   	    Properties data = new Properties();
   	    data.load(fs);
-  			
 		EbayCategory eCat=new EbayCategory(driver);		
 	    Thread.sleep(1000);
+		test.log(LogStatus.INFO, "Navigating to the motors page and It should show page isn't working");
+
 		eCat.Motors().click();
 	    Thread.sleep(1000);
 		ScreenShots("Motors");
@@ -102,10 +107,13 @@ public class EbayLogin extends BaseClass {
 	    
         test.log(LogStatus.FAIL, "This Page isn't Working");
 
+		test.log(LogStatus.INFO, "Navigating to Category Page");
+
 		eCat.categories().click();
 		eCat.catName().click();
 		
         test.log(LogStatus.PASS, "Successfully Navigated to the specified category Page");
+        
     }
      
     @Test(dependsOnMethods = "Category")
@@ -115,6 +123,9 @@ public class EbayLogin extends BaseClass {
     	Properties data = new Properties();
     	data.load(fs);
 		EbaySearch esearch = new EbaySearch(driver);
+		
+		test.log(LogStatus.INFO, "Searching for a product");
+
         esearch.search().sendKeys(excelData.get(0)); 
         
 //		esearch.search().sendKeys(data.getProperty("search"));
@@ -131,12 +142,10 @@ public class EbayLogin extends BaseClass {
        
     @Test(dependsOnMethods = "Search")
     public void Wishlist() throws IOException, InterruptedException {
-         
-    	FileInputStream fs = new FileInputStream("./Test Data/data.properties");
-        Properties data = new Properties();
-    	data.load(fs);
+        
 	    EbayWishlist elist = new EbayWishlist(driver);
-	    
+		test.log(LogStatus.INFO, "Adding to wishlist");
+
 		JavascriptExecutor js = (JavascriptExecutor)driver;
 	    js.executeScript("window.scrollBy(0,150)");
 	    
@@ -145,12 +154,11 @@ public class EbayLogin extends BaseClass {
 		ScreenShots("WishCheck");
 
         test.log(LogStatus.PASS, "Successfully Added to wacthlist");
-
+        
 		js.executeScript("window.scrollBy(0,-150)");
 		
 		WebElement wishListElement = elist.waitForWishList(10);
 
-		// Now you can interact with the wishListElement
 		wishListElement.click();
 		Thread.sleep(1000);
 		ScreenShots("WishList");
@@ -165,10 +173,9 @@ public class EbayLogin extends BaseClass {
     @Test(dependsOnMethods = "Wishlist")
     public void Addtocart() throws IOException, InterruptedException {
     		
-    	FileInputStream fs = new FileInputStream("./Test Data/data.properties");
-    	Properties data = new Properties();
-    	data.load(fs);
 	    EbayAddToCart ecart = new EbayAddToCart(driver);
+		test.log(LogStatus.INFO, "Adding to cart");
+
 	    ecart.AddToCart().click();
 		ScreenShots("AddToCart");
 	    Thread.sleep(1000);
@@ -180,10 +187,9 @@ public class EbayLogin extends BaseClass {
     @Test(dependsOnMethods = "Addtocart")
     public void Signout() throws IOException, InterruptedException {
     		
-    	FileInputStream fs = new FileInputStream("./Test Data/data.properties");
-    	Properties data = new Properties();
-    	data.load(fs);
 	    EbaySignout esignout = new EbaySignout(driver);
+		test.log(LogStatus.INFO, "Signing out");
+
 	    esignout.UserAccount().click();
 	    Thread.sleep(2000);
 	    
@@ -198,7 +204,7 @@ public class EbayLogin extends BaseClass {
 	public void ScreenShots(String name) throws IOException {
 		File f = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
 		Files.copy(f, new File("./Screenshots/"+name+System.currentTimeMillis()+".png"));
-		System.out.println("Screenshot Successfully added to Images");
+		System.out.println("Screenshot "+name+" Successfully added to Images");	
 	}
 	
 	@AfterTest
@@ -214,4 +220,5 @@ public class EbayLogin extends BaseClass {
 	      report.endTest(test);
 	      report.flush();
 	}
+	
 }

@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="9" passed="9" failed="0" skipped="0">
+<testng-results ignored="0" total="9" passed="4" failed="1" skipped="4">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-06-16T17:10:40 IST" name="Suite" finished-at="2024-06-16T17:11:45 IST" duration-ms="64894">
+  <suite started-at="2024-06-19T10:42:36 IST" name="Suite" finished-at="2024-06-19T10:43:01 IST" duration-ms="25083">
     <groups>
     </groups>
-    <test started-at="2024-06-16T17:10:40 IST" name="Test" finished-at="2024-06-16T17:11:45 IST" duration-ms="64894">
+    <test started-at="2024-06-19T10:42:36 IST" name="Test" finished-at="2024-06-19T10:43:01 IST" duration-ms="25083">
       <class name="CAPSTONE_PROJECT.Capstone_Project.EbayLogin">
-        <test-method is-config="true" signature="startTest()[pri:0, instance:CAPSTONE_PROJECT.Capstone_Project.EbayLogin@53fe15ff]" started-at="2024-06-16T17:10:40 IST" name="startTest" finished-at="2024-06-16T17:10:41 IST" duration-ms="442" status="PASS">
+        <test-method is-config="true" signature="startTest()[pri:0, instance:CAPSTONE_PROJECT.Capstone_Project.EbayLogin@563f38c4]" started-at="2024-06-19T10:42:36 IST" name="startTest" finished-at="2024-06-19T10:42:37 IST" duration-ms="842" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- startTest -->
-        <test-method signature="invoke(java.lang.String)[pri:0, instance:CAPSTONE_PROJECT.Capstone_Project.EbayLogin@53fe15ff]" started-at="2024-06-16T17:10:41 IST" name="invoke" finished-at="2024-06-16T17:10:48 IST" duration-ms="7485" status="PASS">
+        <test-method signature="invoke(java.lang.String)[pri:0, instance:CAPSTONE_PROJECT.Capstone_Project.EbayLogin@563f38c4]" started-at="2024-06-19T10:42:37 IST" name="invoke" finished-at="2024-06-19T10:42:44 IST" duration-ms="7333" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -22,43 +22,204 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- invoke -->
-        <test-method signature="invoke()[pri:0, instance:CAPSTONE_PROJECT.Capstone_Project.EbayLogin@53fe15ff]" started-at="2024-06-16T17:10:48 IST" name="invoke" finished-at="2024-06-16T17:10:48 IST" duration-ms="30" status="PASS">
+        <test-method signature="invoke()[pri:0, instance:CAPSTONE_PROJECT.Capstone_Project.EbayLogin@563f38c4]" started-at="2024-06-19T10:42:44 IST" name="invoke" finished-at="2024-06-19T10:42:44 IST" duration-ms="6" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- invoke -->
-        <test-method signature="setup()[pri:0, instance:CAPSTONE_PROJECT.Capstone_Project.EbayLogin@53fe15ff]" started-at="2024-06-16T17:10:48 IST" name="setup" finished-at="2024-06-16T17:10:51 IST" duration-ms="2574" status="PASS">
+        <test-method signature="setup()[pri:0, instance:CAPSTONE_PROJECT.Capstone_Project.EbayLogin@563f38c4]" started-at="2024-06-19T10:42:44 IST" name="setup" finished-at="2024-06-19T10:42:46 IST" duration-ms="2254" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="login()[pri:0, instance:CAPSTONE_PROJECT.Capstone_Project.EbayLogin@53fe15ff]" started-at="2024-06-16T17:10:51 IST" name="login" finished-at="2024-06-16T17:10:59 IST" depends-on-methods="CAPSTONE_PROJECT.Capstone_Project.EbayLogin.invoke" duration-ms="8632" status="PASS">
+        <test-method signature="login()[pri:0, instance:CAPSTONE_PROJECT.Capstone_Project.EbayLogin@563f38c4]" started-at="2024-06-19T10:42:46 IST" name="login" finished-at="2024-06-19T10:42:53 IST" depends-on-methods="CAPSTONE_PROJECT.Capstone_Project.EbayLogin.invoke" duration-ms="6468" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- login -->
-        <test-method signature="Category()[pri:0, instance:CAPSTONE_PROJECT.Capstone_Project.EbayLogin@53fe15ff]" started-at="2024-06-16T17:10:59 IST" name="Category" finished-at="2024-06-16T17:11:09 IST" depends-on-methods="CAPSTONE_PROJECT.Capstone_Project.EbayLogin.login" duration-ms="9250" status="PASS">
+        <test-method signature="Category()[pri:0, instance:CAPSTONE_PROJECT.Capstone_Project.EbayLogin@563f38c4]" started-at="2024-06-19T10:42:53 IST" name="Category" finished-at="2024-06-19T10:42:59 IST" depends-on-methods="CAPSTONE_PROJECT.Capstone_Project.EbayLogin.login" duration-ms="6074" status="FAIL">
+          <exception class="org.openqa.selenium.NoSuchElementException">
+            <message>
+              <![CDATA[Unable to find element with locator By.linkText: Motors
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.21.0', revision: '79ed462ef4'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.1'
+Driver info: driver.version: RemoteWebDriver]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.NoSuchElementException: Unable to find element with locator By.linkText: Motors
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.21.0', revision: '79ed462ef4'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.1'
+Driver info: driver.version: RemoteWebDriver
+at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:168)
+at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:349)
+at CAPSTONE_PROJECT.Capstone_Project.EbayCategory.Motors(EbayCategory.java:25)
+at CAPSTONE_PROJECT.Capstone_Project.EbayLogin.Category(EbayLogin.java:103)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:794)
+at org.testng.TestRunner.run(TestRunner.java:596)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+at org.testng.TestNG.runSuites(TestNG.java:1063)
+at org.testng.TestNG.run(TestNG.java:1031)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Category -->
-        <test-method signature="Search()[pri:0, instance:CAPSTONE_PROJECT.Capstone_Project.EbayLogin@53fe15ff]" started-at="2024-06-16T17:11:09 IST" name="Search" finished-at="2024-06-16T17:11:19 IST" depends-on-methods="CAPSTONE_PROJECT.Capstone_Project.EbayLogin.Category" duration-ms="10128" status="PASS">
+        <test-method signature="Search()[pri:0, instance:CAPSTONE_PROJECT.Capstone_Project.EbayLogin@563f38c4]" started-at="2024-06-19T10:42:59 IST" name="Search" finished-at="2024-06-19T10:42:59 IST" depends-on-methods="CAPSTONE_PROJECT.Capstone_Project.EbayLogin.Category" duration-ms="0" status="SKIP">
+          <exception class="java.lang.Throwable">
+            <message>
+              <![CDATA[Method EbayLogin.Search()[pri:0, instance:CAPSTONE_PROJECT.Capstone_Project.EbayLogin@563f38c4] depends on not successfully finished methods]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.Throwable: Method EbayLogin.Search()[pri:0, instance:CAPSTONE_PROJECT.Capstone_Project.EbayLogin@563f38c4] depends on not successfully finished methods
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:102)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:794)
+at org.testng.TestRunner.run(TestRunner.java:596)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+at org.testng.TestNG.runSuites(TestNG.java:1063)
+at org.testng.TestNG.run(TestNG.java:1031)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.Throwable -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Search -->
-        <test-method signature="Wishlist()[pri:0, instance:CAPSTONE_PROJECT.Capstone_Project.EbayLogin@53fe15ff]" started-at="2024-06-16T17:11:19 IST" name="Wishlist" finished-at="2024-06-16T17:11:29 IST" depends-on-methods="CAPSTONE_PROJECT.Capstone_Project.EbayLogin.Search" duration-ms="9964" status="PASS">
+        <test-method signature="Wishlist()[pri:0, instance:CAPSTONE_PROJECT.Capstone_Project.EbayLogin@563f38c4]" started-at="2024-06-19T10:42:59 IST" name="Wishlist" finished-at="2024-06-19T10:42:59 IST" depends-on-methods="CAPSTONE_PROJECT.Capstone_Project.EbayLogin.Search" duration-ms="0" status="SKIP">
+          <exception class="java.lang.Throwable">
+            <message>
+              <![CDATA[Method EbayLogin.Wishlist()[pri:0, instance:CAPSTONE_PROJECT.Capstone_Project.EbayLogin@563f38c4] depends on not successfully finished methods]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.Throwable: Method EbayLogin.Wishlist()[pri:0, instance:CAPSTONE_PROJECT.Capstone_Project.EbayLogin@563f38c4] depends on not successfully finished methods
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:102)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:794)
+at org.testng.TestRunner.run(TestRunner.java:596)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+at org.testng.TestNG.runSuites(TestNG.java:1063)
+at org.testng.TestNG.run(TestNG.java:1031)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.Throwable -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Wishlist -->
-        <test-method signature="Addtocart()[pri:0, instance:CAPSTONE_PROJECT.Capstone_Project.EbayLogin@53fe15ff]" started-at="2024-06-16T17:11:29 IST" name="Addtocart" finished-at="2024-06-16T17:11:35 IST" depends-on-methods="CAPSTONE_PROJECT.Capstone_Project.EbayLogin.Wishlist" duration-ms="5749" status="PASS">
+        <test-method signature="Addtocart()[pri:0, instance:CAPSTONE_PROJECT.Capstone_Project.EbayLogin@563f38c4]" started-at="2024-06-19T10:42:59 IST" name="Addtocart" finished-at="2024-06-19T10:42:59 IST" depends-on-methods="CAPSTONE_PROJECT.Capstone_Project.EbayLogin.Wishlist" duration-ms="0" status="SKIP">
+          <exception class="java.lang.Throwable">
+            <message>
+              <![CDATA[Method EbayLogin.Addtocart()[pri:0, instance:CAPSTONE_PROJECT.Capstone_Project.EbayLogin@563f38c4] depends on not successfully finished methods]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.Throwable: Method EbayLogin.Addtocart()[pri:0, instance:CAPSTONE_PROJECT.Capstone_Project.EbayLogin@563f38c4] depends on not successfully finished methods
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:102)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:794)
+at org.testng.TestRunner.run(TestRunner.java:596)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+at org.testng.TestNG.runSuites(TestNG.java:1063)
+at org.testng.TestNG.run(TestNG.java:1031)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.Throwable -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Addtocart -->
-        <test-method signature="Signout()[pri:0, instance:CAPSTONE_PROJECT.Capstone_Project.EbayLogin@53fe15ff]" started-at="2024-06-16T17:11:35 IST" name="Signout" finished-at="2024-06-16T17:11:42 IST" depends-on-methods="CAPSTONE_PROJECT.Capstone_Project.EbayLogin.Addtocart" duration-ms="7778" status="PASS">
+        <test-method signature="Signout()[pri:0, instance:CAPSTONE_PROJECT.Capstone_Project.EbayLogin@563f38c4]" started-at="2024-06-19T10:42:59 IST" name="Signout" finished-at="2024-06-19T10:42:59 IST" depends-on-methods="CAPSTONE_PROJECT.Capstone_Project.EbayLogin.Addtocart" duration-ms="0" status="SKIP">
+          <exception class="java.lang.Throwable">
+            <message>
+              <![CDATA[Method EbayLogin.Signout()[pri:0, instance:CAPSTONE_PROJECT.Capstone_Project.EbayLogin@563f38c4] depends on not successfully finished methods]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.Throwable: Method EbayLogin.Signout()[pri:0, instance:CAPSTONE_PROJECT.Capstone_Project.EbayLogin@563f38c4] depends on not successfully finished methods
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:102)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:794)
+at org.testng.TestRunner.run(TestRunner.java:596)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+at org.testng.TestNG.runSuites(TestNG.java:1063)
+at org.testng.TestNG.run(TestNG.java:1031)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.Throwable -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Signout -->
-        <test-method is-config="true" signature="endTest()[pri:0, instance:CAPSTONE_PROJECT.Capstone_Project.EbayLogin@53fe15ff]" started-at="2024-06-16T17:11:42 IST" name="endTest" finished-at="2024-06-16T17:11:43 IST" duration-ms="958" status="PASS">
+        <test-method is-config="true" signature="endTest()[pri:0, instance:CAPSTONE_PROJECT.Capstone_Project.EbayLogin@563f38c4]" started-at="2024-06-19T10:42:59 IST" name="endTest" finished-at="2024-06-19T10:43:00 IST" duration-ms="604" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- endTest -->
-        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:CAPSTONE_PROJECT.Capstone_Project.EbayLogin@53fe15ff]" started-at="2024-06-16T17:11:43 IST" name="closeBrowser" finished-at="2024-06-16T17:11:45 IST" duration-ms="1728" status="PASS">
+        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:CAPSTONE_PROJECT.Capstone_Project.EbayLogin@563f38c4]" started-at="2024-06-19T10:43:00 IST" name="closeBrowser" finished-at="2024-06-19T10:43:01 IST" duration-ms="1166" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeBrowser -->
